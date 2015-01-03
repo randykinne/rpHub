@@ -30,7 +30,7 @@ public class Scoreboard {
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
         obj.setDisplayName(ChatColor.GRAY + "RP " + ChatColor.DARK_GRAY + "-" + ChatColor.DARK_RED.toString() + ChatColor.BOLD + " Hub 1");
 
-        Score score1 = score1 = obj.getScore(ChatColor.RED + "Credits ");;
+        Score score1 = score1 = obj.getScore(ChatColor.RED + "Credits ");
         try {
             score1.setScore(rp.getCredits());
         } catch (Exception ex) {
