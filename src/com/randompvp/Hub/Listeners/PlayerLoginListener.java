@@ -5,6 +5,7 @@ import RandomPvP.Core.Player.RPlayerManager;
 import RandomPvP.Core.Player.Rank.Rank;
 import RandomPvP.Core.RPICore;
 import com.randompvp.Hub.Items.LobbyItems;
+import com.randompvp.Hub.Scoreboard.Scoreboard;
 import com.randompvp.Hub.Teleportation.TpToSpawn;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
@@ -34,6 +35,7 @@ public class PlayerLoginListener implements Listener {
         new BukkitRunnable() {
             public void run() {
                 new LobbyItems(p);
+                new Scoreboard(p);
                 p.sendMessage("");
                 p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Welcome to the " + ChatColor.DARK_RED.toString() + ChatColor.BOLD + "RandomPvP " + ChatColor.RED + "Hub!");
                 try {

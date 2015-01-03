@@ -30,6 +30,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ItemPickupListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ItemPickupListener.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,16 +62,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LobbyItems.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Items/LobbyItems.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="544">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Annoucements.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Chat/Annoucements.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,11 +74,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameMenuGUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameMenuGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/GUIs/GameMenuGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38505095" vertical-offset="0" max-vertical-offset="901">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scoreboard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Scoreboard/Scoreboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +101,7 @@
       <file leaf-file-name="ProfileItemListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ProfileItemListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="765">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
               <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="148" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,21 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Items/Stack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="680">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerLoginListener.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PlayerLoginListener.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1003">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.8335221" vertical-offset="131" max-vertical-offset="1037">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,12 +158,13 @@
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/GUIs/ProfileGUI.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/GUIs/GameMenuGUI.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Teleportation/TpToSpawn.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Chat/Annoucements.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Items/LobbyItems.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ProfileItemListener.java" />
         <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/GameMenuItemListener.java" />
+        <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Scoreboard/Scoreboard.java" />
+        <option value="$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java" />
       </list>
     </option>
   </component>
@@ -243,6 +246,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Hub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RandomPvP-Hub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RPHub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hub" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scoreboard" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -578,14 +603,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/GameMenuItemListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="765">
-          <caret line="29" column="109" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="1037">
@@ -905,20 +922,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Teleportation/TpToSpawn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -959,26 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ProfileItemListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="148" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1003">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ItemPickupListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
@@ -1005,8 +994,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/GUIs/GameMenuGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38505095" vertical-offset="0" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/ProfileItemListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="148" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Scoreboard/Scoreboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/randompvp/Hub/Listeners/PlayerLoginListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8335221" vertical-offset="131" max-vertical-offset="1037">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
