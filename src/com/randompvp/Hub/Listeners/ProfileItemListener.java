@@ -27,6 +27,7 @@ public class ProfileItemListener implements Listener {
                 if(e.getItem().hasItemMeta()) {
                     if(e.getItem().getItemMeta().hasDisplayName()) {
                         if(ChatColor.stripColor(e.getItem().getItemMeta().getDisplayName()).equals("Your Profile")) {
+                            p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.DARK_RED + "Opening Profile Page...");
                             new ProfileGUI(p);
                         }
                     }

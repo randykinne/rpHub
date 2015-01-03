@@ -28,6 +28,7 @@ public class GameMenuItemListener implements Listener{
                 if(e.getItem().hasItemMeta()) {
                     if(e.getItem().getItemMeta().hasDisplayName()) {
                         if(ChatColor.stripColor(e.getItem().getItemMeta().getDisplayName()).equals("Game Menu")) {
+                            p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.DARK_RED + "Opening Game Menu...");
                             new GameMenuGUI(p);
                         }
                     }
