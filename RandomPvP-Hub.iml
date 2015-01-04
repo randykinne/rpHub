@@ -27,6 +27,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="RPI" level="project" />
+    <orderEntry type="library" name="Spigot 1.7_8 Protocol hack" level="project" />
   </component>
 </module>
-
