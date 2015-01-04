@@ -41,7 +41,7 @@ public class PlayerLoginListener implements Listener {
                 try {
                     RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
                     if(rp.getRank().has(Rank.PREMIUM)) {
-                        p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Thank you for your support! " + ChatColor.AQUA + "Premium " + ChatColor.RED + "keep us going!");
+                        p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Thank you for your support! " + ChatColor.AQUA + "Premium " + ChatColor.RED + " players keep us going!");
                     } else {
                         p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Please purchase " + ChatColor.AQUA + "Premium " + ChatColor.RED + "to unlock all features!");
                     }
