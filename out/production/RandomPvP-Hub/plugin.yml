@@ -1,7 +1,5 @@
 name: Hub
-author: WesJD
+author: [WesJD, RandomPvP]
 main: com.randompvp.Hub.Main
 version: 0.1
-commands:
-    test:
-        description: Command.
+depend: [RPI]

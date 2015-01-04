@@ -1,5 +1,7 @@
 package com.randompvp.Hub;
 
+import RandomPvP.Core.Game.GameManager;
+import RandomPvP.Core.Game.GameState.GameState;
 import com.randompvp.Hub.Chat.Annoucements;
 import com.randompvp.Hub.Listeners.*;
 import org.bukkit.Bukkit;
@@ -21,6 +23,15 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        GameManager.setGame(new Hub());
+
+        {
+            GameState state = new GameState("Hub", 0, new Hub());
+            state.setJoinable(true);
+            state.registerGameState(state);
+            GameManager.setState(state);
+        }
+
         plugin = this;
 
         new Annoucements();
