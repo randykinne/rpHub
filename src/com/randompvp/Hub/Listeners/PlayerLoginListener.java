@@ -40,7 +40,7 @@ public class PlayerLoginListener implements Listener {
                 p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Welcome to the " + ChatColor.DARK_RED.toString() + ChatColor.BOLD + "RandomPvP " + ChatColor.RED + "Hub!");
                 try {
                     RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
-                    if(rp.getRank() == Rank.PREMIUM || rp.getRank() == Rank.VIP || rp.getRank() == Rank.MOD || rp.getRank() == Rank.DEV || rp.getRank() == Rank.ADMIN || rp.getRank() == Rank.OWNER) {
+                    if(rp.getRank().has(Rank.PREMIUM)) {
                         p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Thank you for your support! " + ChatColor.AQUA + "Premium " + ChatColor.RED + "keep us going!");
                     } else {
                         p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "Please purchase " + ChatColor.AQUA + "Premium " + ChatColor.RED + "to unlock all features!");
