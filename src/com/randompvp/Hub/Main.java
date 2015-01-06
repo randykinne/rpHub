@@ -44,6 +44,8 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new GameMenuItemListener(), this);
         pm.registerEvents(new ItemDropListener(), this);
         pm.registerEvents(new ItemPickupListener(), this);
+        pm.registerEvents(new BlockBreakListener(), this);
+        pm.registerEvents(new PlayerDamageListener(), this);
     }
 
     @Override

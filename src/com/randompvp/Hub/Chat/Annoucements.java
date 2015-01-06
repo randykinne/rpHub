@@ -45,7 +45,7 @@ public class Annoucements {
             public void run() {
                 Bukkit.getServer().broadcastMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.GRAY + getNewMessage());
             }
-        }.runTaskTimer(Main.getInstance(),20L,600L);
+        }.runTaskTimer(Main.getInstance(),20L,1200L);
     }
 
 }
