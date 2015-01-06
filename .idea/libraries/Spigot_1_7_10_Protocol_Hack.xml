@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Spigot 1.7.10 Protocol Hack">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Bukkit Development/Libraries/Bukkit/Spigot/Spigot 1.7.10 Protocol Hack.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Bukkit Development/Libraries/Bukkit/Spigot/Spigot 1.7.10 Protocol Hack.jar!/" />
+    </SOURCES>
+  </library>
+</component>

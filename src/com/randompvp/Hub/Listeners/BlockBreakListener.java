@@ -1,5 +1,6 @@
 package com.randompvp.Hub.Listeners;
 
+import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -17,7 +18,9 @@ public class BlockBreakListener implements Listener {
     @EventHandler
     public void onBlockBreak(BlockBreakEvent e) {
         //RPI doesn't handle flowers & grass :(
-        e.setCancelled(true);
+        if(!(e.getPlayer().getGameMode() == GameMode.CREATIVE)) {
+            e.setCancelled(true);
+        }
     }
 
 }
