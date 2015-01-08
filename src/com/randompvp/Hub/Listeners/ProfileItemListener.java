@@ -1,6 +1,6 @@
 package com.randompvp.Hub.Listeners;
 
-import com.randompvp.Hub.GUIs.ProfileGUI;
+import com.randompvp.Hub.GUIs.StatsGUI;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -28,7 +28,7 @@ public class ProfileItemListener implements Listener {
                     if(e.getItem().getItemMeta().hasDisplayName()) {
                         if(ChatColor.stripColor(e.getItem().getItemMeta().getDisplayName()).equals("Your Profile")) {
                             p.sendMessage(ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.DARK_RED + "Opening Profile Page...");
-                            new ProfileGUI(p);
+                            new StatsGUI(p);
                         }
                     }
                 }

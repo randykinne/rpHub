@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="RPI">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../Bukkit Development/RandomPvP/RPI/RPI.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../RPI.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
