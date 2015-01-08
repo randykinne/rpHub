@@ -23,6 +23,10 @@ public class ShopGUI {
         IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Shop Page", 27, new IconMenu.OptionClickEventHandler() {
             @Override
             public void onOptionClick(IconMenu.OptionClickEvent e) {
+                Player c = e.getPlayer();
+                if(e.getPosition() == 0) {
+                    new ProfileGUI(c);
+                }
                 e.setWillDestroy(true);
                 e.setWillDestroy(true);
             }
@@ -32,6 +36,7 @@ public class ShopGUI {
             menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "");
         }
         menu.setOption(13, new ItemStack(Material.BEDROCK, 1), ChatColor.YELLOW + "Coming soon!", ChatColor.GRAY + "This feature is coming soon");
+        menu.setOption(0, new ItemStack(Material.ARROW, 1), ChatColor.DARK_GRAY + "< Go Back <");
         menu.open(p);
     }
 

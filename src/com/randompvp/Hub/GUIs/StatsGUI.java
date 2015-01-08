@@ -23,6 +23,10 @@ public class StatsGUI {
         IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Stats Page", 27, new IconMenu.OptionClickEventHandler() {
             @Override
             public void onOptionClick(IconMenu.OptionClickEvent e) {
+                Player c = e.getPlayer();
+                if(e.getPosition() == 0) {
+                    new ProfileGUI(c);
+                }
                 e.setWillDestroy(true);
                 e.setWillDestroy(true);
             }
@@ -33,6 +37,7 @@ public class StatsGUI {
         }
         try {
             RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
+            menu.setOption(0, new ItemStack(Material.ARROW, 1), ChatColor.DARK_GRAY + "< Go Back <");
             menu.setOption(11, new ItemStack(Material.PAPER, 1), ChatColor.RED + "RandomPvP ID", ChatColor.GRAY + "Your RPID is " + ChatColor.RED + rp.getRPID() + ChatColor.GRAY + ".");
             menu.setOption(13, new ItemStack(Material.BEACON, 1), ChatColor.RED + "Rank", ChatColor.GRAY + "Your current rank is " + ChatColor.RED + rp.getRank() + ChatColor.GRAY + ".");
             menu.setOption(15, new ItemStack(Material.REDSTONE, 1), ChatColor.RED + "Credits", ChatColor.GRAY + "Your balance is " + ChatColor.RED + rp.getCredits() + ChatColor.GRAY + ".");
