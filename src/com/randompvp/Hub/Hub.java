@@ -68,4 +68,7 @@ public class Hub implements Game {
     public int getMinPlayers() {
         return 0;
     }
+
+    @Override
+    public int getBufferOverflow() { return -1; }
 }

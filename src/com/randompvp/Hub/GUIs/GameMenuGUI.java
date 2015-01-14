@@ -36,7 +36,7 @@ public class GameMenuGUI {
             }
         }, RPICore.getInstance());
         for(int i=0; i < 27; i++) {
-            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "", "");
+            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), " ", " ");
         }
         menu.setOption(11, new ItemStack(Material.DIAMOND_SWORD, 1), ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "PVPACADEMY", new String[] { "", ChatColor.RED + "Left Click" + ChatColor.GRAY + " to join!", "" });
         menu.setOption(13, new ItemStack(Material.GOLDEN_APPLE, 1), ChatColor.GOLD.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "ULTRA-HARDCORE", new String[] { "", ChatColor.YELLOW + "Left Click" + ChatColor.GRAY + " to join!", "" });

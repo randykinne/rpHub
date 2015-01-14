@@ -1,0 +1,5 @@
+name: Hub
+author: [WesJD, RandomPvP]
+main: com.randompvp.Hub.Main
+version: 0.1
+depend: [RPI]
