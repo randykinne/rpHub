@@ -15,17 +15,17 @@ import org.bukkit.inventory.ItemStack;
  * Enjoy.                                                                                 *
  * ****************************************************************************************
  */
-public class ProfileGUI {
+public class ShopGUI {
 
-    public ProfileGUI(Player p) {
-        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Profile Page", 27, new IconMenu.OptionClickEventHandler() {
+    //coming soon
+
+    public ShopGUI(Player p) {
+        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Shop Page", 27, new IconMenu.OptionClickEventHandler() {
             @Override
             public void onOptionClick(IconMenu.OptionClickEvent e) {
                 Player c = e.getPlayer();
-                if(e.getPosition() == 11) {
-                    new StatsGUI(c);
-                } else if(e.getPosition() == 15) {
-                    new ShopGUI(c);
+                if(e.getPosition() == 0) {
+                    new ProfileGUI(c);
                 }
                 e.setWillDestroy(true);
                 e.setWillDestroy(true);
@@ -35,8 +35,8 @@ public class ProfileGUI {
         for(int i=0; i < 27; i++) {
             menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "");
         }
-        menu.setOption(11, new ItemStack(Material.PAPER, 1), ChatColor.RED + "Stats", ChatColor.GRAY + "Click to view your stats");
-        menu.setOption(15, new ItemStack(Material.CHEST, 1), ChatColor.RED + "Credits Shop", ChatColor.GRAY + "Click to view the credits shop");
+        menu.setOption(13, new ItemStack(Material.BEDROCK, 1), ChatColor.YELLOW + "Coming soon!", ChatColor.GRAY + "This feature is coming soon");
+        menu.setOption(0, new ItemStack(Material.ARROW, 1), ChatColor.DARK_GRAY + "< Go Back <");
         menu.open(p);
     }
 
