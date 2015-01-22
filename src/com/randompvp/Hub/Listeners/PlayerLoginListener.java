@@ -51,7 +51,7 @@ public class PlayerLoginListener implements Listener {
                 p.sendMessage("");
                 p.playSound(p.getLocation(), Sound.NOTE_PLING, 2F, 1F);
             }
-        }.runTaskLater(RPICore.getInstance(), 60L);
+        }.runTaskLater(RPICore.getInstance(), 30L);
     }
 
 }

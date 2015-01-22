@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RandomPvP-Hub">
+    <output-path>$PROJECT_DIR$/../../Bukkit Development/RandomPvP/Minigame</output-path>
+    <root id="archive" name="RandomPvP-Hub.jar">
+      <element id="module-output" name="rpHub" />
+    </root>
+  </artifact>
+</component>
