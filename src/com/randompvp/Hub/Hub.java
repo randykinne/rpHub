@@ -19,9 +19,15 @@ import java.util.ArrayList;
  * ***************************************************************************************
  */
 public class Hub implements Game {
+
     @Override
     public Game setupGame() throws SQLException {
         return null;
+    }
+
+    @Override
+    public int getBufferOverflow() {
+        return 0;
     }
 
     @Override

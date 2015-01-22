@@ -2,10 +2,15 @@ package com.randompvp.Hub.GUIs;
 
 import RandomPvP.Core.RPICore;
 import RandomPvP.Core.Util.GUI.IconMenu;
+import RandomPvP.Core.Util.ItemBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
 
 /**
  * ****************************************************************************************
@@ -17,27 +22,23 @@ import org.bukkit.inventory.ItemStack;
  */
 public class ShopGUI {
 
-    //coming soon
+    private static Inventory inv;
 
     public ShopGUI(Player p) {
-        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Shop Page", 27, new IconMenu.OptionClickEventHandler() {
-            @Override
-            public void onOptionClick(IconMenu.OptionClickEvent e) {
-                Player c = e.getPlayer();
-                if(e.getPosition() == 0) {
-                    new ProfileGUI(c);
-                }
-                e.setWillDestroy(true);
-                e.setWillDestroy(true);
-            }
-        }, RPICore.getInstance());
-        menu.setSpecificTo(p);
+        inv = Bukkit.getServer().createInventory(null, 27, ChatColor.GRAY.toString() + ChatColor.ITALIC + "Shop Page");
         for(int i=0; i < 27; i++) {
-            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "");
+            inv.setItem(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7));
         }
-        menu.setOption(13, new ItemStack(Material.BEDROCK, 1), ChatColor.YELLOW + "Coming soon!", ChatColor.GRAY + "This feature is coming soon");
-        menu.setOption(0, new ItemStack(Material.ARROW, 1), ChatColor.DARK_GRAY + "< Go Back <");
-        menu.open(p);
+        inv.setItem(0, ItemBuilder.build(Material.TNT, ChatColor.RED + "Close", 1));
+        inv.setItem(13, ItemBuilder.build(Material.ENDER_CHEST, ChatColor.RED + "1 Day Credit Booster" , 1, Arrays.asList("", ChatColor.GRAY + "Receive x2 credits for one day when",
+                ChatColor.GRAY + "purchased.", "", ChatColor.DARK_RED.toString() + ChatColor.BOLD + "WARNING: "
+                        + ChatColor.GRAY + "This can only be purchased", ChatColor.GRAY + "once every week.",
+                "", ChatColor.RED + "Price: " + ChatColor.GRAY + "Coming Soon!", "")));
+        p.openInventory(inv);
+    }
+
+    public static Inventory getInventory() {
+        return inv;
     }
 
 }

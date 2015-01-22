@@ -23,14 +23,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        GameManager.setGame(new Hub());
-
-        {
-            GameState state = new GameState("Hub", 0, new Hub());
-            state.setJoinable(true);
-            state.registerGameState(state);
-            GameManager.setState(state);
-        }
+        GameManager.setState(GameState.LOBBY);
 
         plugin = this;
 
@@ -46,6 +39,7 @@ public class Main extends JavaPlugin {
         pm.registerEvents(new ItemPickupListener(), this);
         pm.registerEvents(new BlockBreakListener(), this);
         pm.registerEvents(new PlayerDamageListener(), this);
+        pm.registerEvents(new GUIListener(), this);
     }
 
     @Override

@@ -4,10 +4,15 @@ import RandomPvP.Core.Player.RPlayer;
 import RandomPvP.Core.Player.RPlayerManager;
 import RandomPvP.Core.RPICore;
 import RandomPvP.Core.Util.GUI.IconMenu;
+import RandomPvP.Core.Util.ItemBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
 
 /**
  * ****************************************************************************************
@@ -19,35 +24,29 @@ import org.bukkit.inventory.ItemStack;
  */
 public class StatsGUI {
 
+    private static Inventory inv;
+
     public StatsGUI(Player p) {
-        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Stats Page", 27, new IconMenu.OptionClickEventHandler() {
-            @Override
-            public void onOptionClick(IconMenu.OptionClickEvent e) {
-                Player c = e.getPlayer();
-                if(e.getPosition() == 0) {
-                    new ProfileGUI(c);
-                }
-                e.setWillDestroy(true);
-                e.setWillDestroy(true);
-            }
-        }, RPICore.getInstance());
-        menu.setSpecificTo(p);
+        inv = Bukkit.getServer().createInventory(null, 27, ChatColor.GRAY.toString() + ChatColor.ITALIC + "Profile Page");
         for(int i=0; i < 27; i++) {
-            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "");
+            inv.setItem(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7));
         }
         try {
             RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
-            menu.setOption(0, new ItemStack(Material.ARROW, 1), ChatColor.DARK_GRAY + "< Go Back <");
-            menu.setOption(11, new ItemStack(Material.PAPER, 1), ChatColor.RED + "RandomPvP ID", ChatColor.GRAY + "Your RPID is " + ChatColor.RED + rp.getRPID() + ChatColor.GRAY + ".");
-            menu.setOption(13, new ItemStack(Material.BEACON, 1), ChatColor.RED + "Rank", ChatColor.GRAY + "Your current rank is " + ChatColor.RED + rp.getRank() + ChatColor.GRAY + ".");
-            menu.setOption(15, new ItemStack(Material.REDSTONE, 1), ChatColor.RED + "Credits", ChatColor.GRAY + "Your balance is " + ChatColor.RED + rp.getCredits() + ChatColor.GRAY + ".");
+            inv.setItem(0, ItemBuilder.build(Material.TNT, ChatColor.RED + "Close", 1));
+            inv.setItem(11, ItemBuilder.build(Material.PAPER, ChatColor.RED + "RandomPvP ID", 1, Arrays.asList(ChatColor.GRAY + "Your RPID is " + ChatColor.RED + rp.getRPID() + ChatColor.GRAY + ".")));
+            inv.setItem(13, ItemBuilder.build(Material.BEACON, ChatColor.RED + "Rank" , 1, Arrays.asList(ChatColor.GRAY + "Your current rank is " + ChatColor.RED + rp.getRank() + ChatColor.GRAY + ".")));
+            inv.setItem(15, ItemBuilder.build(Material.REDSTONE, ChatColor.RED + "Credits" , 1, Arrays.asList(ChatColor.GRAY + "Your balance is " + ChatColor.RED + rp.getCredits() + ChatColor.GRAY + ".")));
         } catch (Exception ex) {
-            p.sendMessage(ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "An error occurred while retrieving your data.");
-            menu.destroy();
             ex.printStackTrace();
+            p.sendMessage(ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.GRAY + "An error occurred while retrieving your data.");
             return;
         }
-        menu.open(p);
+        p.openInventory(inv);
+    }
+
+    public static Inventory getInventory() {
+        return inv;
     }
 
 }

@@ -4,10 +4,15 @@ import RandomPvP.Core.Player.RPlayer;
 import RandomPvP.Core.Player.RPlayerManager;
 import RandomPvP.Core.RPICore;
 import RandomPvP.Core.Util.GUI.IconMenu;
+import RandomPvP.Core.Util.ItemBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
 
 /**
  * ****************************************************************************************
@@ -19,29 +24,21 @@ import org.bukkit.inventory.ItemStack;
  */
 public class GameMenuGUI {
 
-    public GameMenuGUI(final Player p) {
-        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Game Menu", 27, new IconMenu.OptionClickEventHandler() {
-            @Override
-            public void onOptionClick(IconMenu.OptionClickEvent e) {
-                RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
-                if(e.getPosition() == 11) {
-                    rp.send("PA1");
-                } else if(e.getPosition() == 13) {
-                    p.sendMessage(ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "This game is coming to our network shortly.");
-                } else if(e.getPosition() == 15) {
-                    p.sendMessage(ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RED + "This game is coming to our network shortly.");
-                }
-                e.setWillClose(true);
-                e.setWillDestroy(true);
-            }
-        }, RPICore.getInstance());
+    private static Inventory inv;
+
+    public GameMenuGUI(Player p) {
+        inv = Bukkit.getServer().createInventory(null, 27, ChatColor.GRAY.toString() + ChatColor.ITALIC + "Game Menu");
         for(int i=0; i < 27; i++) {
-            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "", "");
+            inv.setItem(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7));
         }
-        menu.setOption(11, new ItemStack(Material.DIAMOND_SWORD, 1), ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "PVPACADEMY", new String[] { "", ChatColor.RED + "Left Click" + ChatColor.GRAY + " to join!", "" });
-        menu.setOption(13, new ItemStack(Material.GOLDEN_APPLE, 1), ChatColor.GOLD.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "ULTRA-HARDCORE", new String[] { "", ChatColor.YELLOW + "Left Click" + ChatColor.GRAY + " to join!", "" });
-        menu.setOption(15, new ItemStack(Material.STONE_AXE, 1), ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "GLITCH CRAFT", new String[] { "", ChatColor.GRAY + "Left Click to join!", "" });
-        menu.open(p);
+        inv.setItem(11, ItemBuilder.build(Material.DIAMOND_SWORD, ChatColor.DARK_RED.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "PVPACADEMY", 1, Arrays.asList("", ChatColor.RED + "Left Click" + ChatColor.GRAY + " to join!", "")));
+        inv.setItem(13, ItemBuilder.build(Material.GOLDEN_APPLE, ChatColor.GOLD.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "ULTRA-HARDCORE", 1, Arrays.asList("", ChatColor.YELLOW + "Left Click" + ChatColor.GRAY + " to join!", "")));
+        inv.setItem(15, ItemBuilder.build(Material.STONE_AXE, ChatColor.DARK_GRAY.toString() + ChatColor.BOLD + ">> " + ChatColor.RESET.toString() + ChatColor.BOLD + "GLITCH CRAFT", 1, Arrays.asList("", ChatColor.GRAY + "Left Click" + ChatColor.GRAY + " to join!", "")));
+        p.openInventory(inv);
+    }
+
+    public static Inventory getInventory() {
+        return inv;
     }
 
 }

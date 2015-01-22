@@ -1,11 +1,14 @@
 package com.randompvp.Hub.GUIs;
 
-import RandomPvP.Core.RPICore;
-import RandomPvP.Core.Util.GUI.IconMenu;
+import RandomPvP.Core.Util.ItemBuilder;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+
+import java.util.Arrays;
 
 /**
  * ****************************************************************************************
@@ -17,27 +20,20 @@ import org.bukkit.inventory.ItemStack;
  */
 public class ProfileGUI {
 
+    private static Inventory inv;
+
     public ProfileGUI(Player p) {
-        IconMenu menu = new IconMenu(ChatColor.GRAY.toString() + ChatColor.ITALIC + "Profile Page", 27, new IconMenu.OptionClickEventHandler() {
-            @Override
-            public void onOptionClick(IconMenu.OptionClickEvent e) {
-                Player c = e.getPlayer();
-                if(e.getPosition() == 11) {
-                    new StatsGUI(c);
-                } else if(e.getPosition() == 15) {
-                    new ShopGUI(c);
-                }
-                e.setWillDestroy(true);
-                e.setWillDestroy(true);
-            }
-        }, RPICore.getInstance());
-        menu.setSpecificTo(p);
+        inv = Bukkit.getServer().createInventory(null, 27, ChatColor.GRAY.toString() + ChatColor.ITALIC + "Profile Page");
         for(int i=0; i < 27; i++) {
-            menu.setOption(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7), "");
+            inv.setItem(i, new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7));
         }
-        menu.setOption(11, new ItemStack(Material.PAPER, 1), ChatColor.RED + "Stats", ChatColor.GRAY + "Click to view your stats");
-        menu.setOption(15, new ItemStack(Material.CHEST, 1), ChatColor.RED + "Credits Shop", ChatColor.GRAY + "Click to view the credits shop");
-        menu.open(p);
+        inv.setItem(11, ItemBuilder.build(Material.PAPER, ChatColor.RED + "Stats", 1, Arrays.asList(ChatColor.GRAY + "Click to view your stats")));
+        inv.setItem(15, ItemBuilder.build(Material.CHEST, ChatColor.RED + "Credits Shop" , 1, Arrays.asList(ChatColor.GRAY + "Click to view the credits shop")));
+        p.openInventory(inv);
+    }
+
+    public static Inventory getInventory() {
+        return inv;
     }
 
 }
