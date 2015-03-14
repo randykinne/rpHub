@@ -1,6 +1,5 @@
-package com.randompvp.Hub.GUIs;
+package com.randompvp.hub.GUIs;
 
-import RandomPvP.Core.RPICore;
 import RandomPvP.Core.Util.GUI.IconMenu;
 import RandomPvP.Core.Util.ItemBuilder;
 import org.bukkit.Bukkit;

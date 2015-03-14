@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/rpHub.iml" filepath="$PROJECT_DIR$/rpHub.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/RPHub.iml" filepath="$PROJECT_DIR$/RPHub.iml" />
->>>>>>> f4ec8d1299b7b9a5dfb24f580d1e8f656b7d2178
     </modules>
   </component>
 </project>

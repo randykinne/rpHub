@@ -1,10 +1,9 @@
-package com.randompvp.Hub.Scoreboard;
+package com.randompvp.hub.Scoreboard;
 
+import RandomPvP.Core.Player.PlayerManager;
 import RandomPvP.Core.Player.RPlayer;
-import RandomPvP.Core.Player.RPlayerManager;
-import RandomPvP.Core.RPICore;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Objective;
@@ -21,8 +20,8 @@ import org.bukkit.scoreboard.ScoreboardManager;
  */
 public class Scoreboard {
 
-    public Scoreboard(Player p) {
-        RPlayer rp = RPlayerManager.getInstance().getPlayer(p);
+    public static org.bukkit.scoreboard.Scoreboard getScoreboard(Player p) {
+        RPlayer rp = PlayerManager.getInstance().getPlayer(p);
         ScoreboardManager sb = Bukkit.getServer().getScoreboardManager();
         org.bukkit.scoreboard.Scoreboard hub = sb.getNewScoreboard();
         Objective obj = hub.registerNewObjective("hub", "dummy");
@@ -38,7 +37,7 @@ public class Scoreboard {
             ex.printStackTrace();
         }
 
-        p.setScoreboard(hub);
+        return hub;
     }
 
 }

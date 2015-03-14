@@ -1,8 +1,10 @@
-package com.randompvp.Hub.Items;
+package com.randompvp.hub.Items;
 
+import RandomPvP.Core.Util.Color.CC;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 /**
  * ****************************************************************************************
@@ -14,15 +16,21 @@ import org.bukkit.entity.Player;
  */
 public class LobbyItems {
 
-    private Stack stack;
+    public void setItems(Player p) {
+        Stack stack = new Stack();
+        p.getInventory().clear();
+        p.getInventory().setItem(0, stack.build(Material.COMPASS, 1,
+                (short) 0, ChatColor.DARK_RED.toString() + ChatColor.BOLD + "Game Menu", new String[] { ChatColor.GRAY + "Used to select a game" }));
+        p.getInventory().setItem(8, stack.pskull(p, 1,
+                ChatColor.DARK_RED.toString() + ChatColor.BOLD + "Your Profile", new String[] { ChatColor.GRAY + "Used to view info about your account" }));
+        p.getInventory().setItem(1, stack.build(Material.WATCH, 1,
+                (short) 0, ChatColor.DARK_RED.toString() + ChatColor.BOLD + "Hub Selector", new String[] { ChatColor.GRAY + "Used to switch between hubs" }));
+        p.getInventory().setItem(7, stack.build(Material.CHEST, 1,
+                (short) 0,CC.DRED.toString() + CC.BLD + "Gizmos", new String[] { CC.GRY + "Used to play with Gizmos!" } ));
+    }
 
-    public LobbyItems(Player p) {
-        stack = new Stack();
-
-        p.getInventory().setItem(0, stack.build(Material.COMPASS, 1, (short) 0, ChatColor.DARK_RED.toString() + ChatColor.BOLD + "Game Menu", new String[] { ChatColor.GRAY + "Used to select a game" }));
-        p.getInventory().setItem(8, stack.pskull(p, 1, ChatColor.DARK_RED.toString() + ChatColor.BOLD + "Your Profile", new String[] { ChatColor.GRAY + "Used to view info about your account" }));
-
-        stack = null;
+    public ItemStack[] getItems() {
+        return null;
     }
 
 }

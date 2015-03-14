@@ -1,4 +1,4 @@
-package com.randompvp.Hub.Items;
+package com.randompvp.hub.Items;
 
 import org.bukkit.Material;
 import org.bukkit.SkullType;
@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.bukkit.material.Skull;
 
 import java.util.Arrays;
 

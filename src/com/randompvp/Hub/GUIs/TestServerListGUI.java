@@ -1,4 +1,4 @@
-package com.randompvp.Hub.GUIs;
+package com.randompvp.hub.GUIs;
 
 import org.bukkit.entity.Player;
 

@@ -1,12 +1,10 @@
-package com.randompvp.Hub;
+package com.randompvp.hub;
 
+import RandomPvP.Core.Game.Game;
 import RandomPvP.Core.Game.GameManager;
-import RandomPvP.Core.Game.GameState.GameState;
-import com.randompvp.Hub.Chat.Annoucements;
-import com.randompvp.Hub.Listeners.*;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginManager;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -19,37 +17,28 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Main extends JavaPlugin {
 
-    protected static Main plugin;
-
     @Override
     public void onEnable() {
-        GameManager.setState(GameState.LOBBY);
-
-        plugin = this;
-
-        new Annoucements();
-
-        PluginManager pm = Bukkit.getServer().getPluginManager();
-
-        pm.registerEvents(new FoodDropListener(), this);
-        pm.registerEvents(new PlayerLoginListener(), this);
-        pm.registerEvents(new ProfileItemListener(), this);
-        pm.registerEvents(new GameMenuItemListener(), this);
-        pm.registerEvents(new ItemDropListener(), this);
-        pm.registerEvents(new ItemPickupListener(), this);
-        pm.registerEvents(new BlockBreakListener(), this);
-        pm.registerEvents(new PlayerDamageListener(), this);
-        pm.registerEvents(new GUIListener(), this);
+        Game game = new Hub();
+        {
+            try {
+                game = game.setupGame();
+            } catch (Exception e) {
+                e.printStackTrace();
+                Bukkit.getServer().shutdown();
+            }
+        }
+        System.out.println(getServer().getMotd().replace("§", "&"));
     }
 
     @Override
     public void onDisable() {
         Bukkit.getServer().getScheduler().cancelAllTasks();
-        plugin = null;
-    }
-
-    public static Plugin getInstance() {
-        return plugin;
+        for(Entity e : Bukkit.getWorld("Hub").getEntities()) {
+            if(!(e instanceof Player)) {
+                e.remove();
+            }
+        }
     }
 
 }

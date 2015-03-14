@@ -1,6 +1,6 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
-import com.randompvp.Hub.Items.LobbyItems;
+import com.randompvp.hub.Items.LobbyItems;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

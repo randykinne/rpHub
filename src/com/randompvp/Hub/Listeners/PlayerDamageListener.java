@@ -1,11 +1,10 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
-import com.randompvp.Hub.Teleportation.TpToSpawn;
+import com.randompvp.hub.Teleportation.TpToSpawn;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.player.PlayerItemDamageEvent;
 
 /**
  * ****************************************************************************************

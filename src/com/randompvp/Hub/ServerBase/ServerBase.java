@@ -1,4 +1,4 @@
-package com.randompvp.Hub.ServerBase;
+package com.randompvp.hub.ServerBase;
 
 import RandomPvP.Core.Data.MySQL;
 

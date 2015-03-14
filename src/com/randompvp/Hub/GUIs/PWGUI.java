@@ -1,7 +1,4 @@
-package com.randompvp.Hub.Teleportation;
-
-import org.bukkit.Location;
-import org.bukkit.entity.Player;
+package com.randompvp.hub.GUIs;
 
 /**
  * ****************************************************************************************
@@ -11,11 +8,5 @@ import org.bukkit.entity.Player;
  * Enjoy.                                                                                 *
  * ****************************************************************************************
  */
-public class TpToSpawn {
-
-    public TpToSpawn(Player p) {
-        Location loc = new Location(p.getWorld(), 1041, 11, 586);
-        p.teleport(loc);
-    }
-
+public class PWGUI {
 }

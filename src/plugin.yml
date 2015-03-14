@@ -1,5 +1,5 @@
 name: Hub
 author: [WesJD, RandomPvP]
-main: com.randompvp.Hub.Main
+main: com.randompvp.hub.Main
 version: 0.1
 depend: [RPI]

@@ -1,20 +1,16 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
-import RandomPvP.Core.Game.Game;
 import RandomPvP.Core.Player.RPlayer;
 import RandomPvP.Core.Player.RPlayerManager;
-import com.randompvp.Hub.GUIs.GameMenuGUI;
-import com.randompvp.Hub.GUIs.ProfileGUI;
-import com.randompvp.Hub.GUIs.ShopGUI;
-import com.randompvp.Hub.GUIs.StatsGUI;
+import com.randompvp.hub.GUIs.GameMenuGUI;
+import com.randompvp.hub.GUIs.ProfileGUI;
+import com.randompvp.hub.GUIs.ShopGUI;
+import com.randompvp.hub.GUIs.StatsGUI;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.HumanEntity;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.ItemStack;
 
 /**
  * ****************************************************************************************

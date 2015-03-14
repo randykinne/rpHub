@@ -1,12 +1,12 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
 import RandomPvP.Core.Player.RPlayer;
 import RandomPvP.Core.Player.RPlayerManager;
 import RandomPvP.Core.Player.Rank.Rank;
 import RandomPvP.Core.RPICore;
-import com.randompvp.Hub.Items.LobbyItems;
-import com.randompvp.Hub.Scoreboard.Scoreboard;
-import com.randompvp.Hub.Teleportation.TpToSpawn;
+import com.randompvp.hub.Items.LobbyItems;
+import com.randompvp.hub.Scoreboard.Scoreboard;
+import com.randompvp.hub.Teleportation.TpToSpawn;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;

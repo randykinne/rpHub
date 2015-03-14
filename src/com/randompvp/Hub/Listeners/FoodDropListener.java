@@ -1,4 +1,4 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

@@ -1,6 +1,6 @@
-package com.randompvp.Hub.Listeners;
+package com.randompvp.hub.Listeners;
 
-import com.randompvp.Hub.GUIs.ProfileGUI;
+import com.randompvp.hub.GUIs.ProfileGUI;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
