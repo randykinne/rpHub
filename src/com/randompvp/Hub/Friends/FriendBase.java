@@ -4,9 +4,6 @@ import RandomPvP.Core.Data.MySQL;
 import RandomPvP.Core.Player.OfflineRPlayer;
 import RandomPvP.Core.RPICore;
 import RandomPvP.Core.Util.StringUtil;
-import com.avaje.ebeaninternal.server.transaction.BulkEventListenerMap;
-import net.minecraft.util.io.netty.handler.codec.http.HttpContentEncoder;
-import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.sql.PreparedStatement;
@@ -32,7 +29,6 @@ public class FriendBase {
             public void run() {
                 try {
                     PreparedStatement stmt = MySQL.getConnection().prepareStatement("SELECT * FROM `friends` WHERE `rpid` = ?");
-
                     {
                         stmt.setInt(1, p.getRPID());
                     }
@@ -59,7 +55,6 @@ public class FriendBase {
             public void run() {
                 try {
                     PreparedStatement stmt = MySQL.getConnection().prepareStatement("UPDATE `friends` SET `friends` = ? WHERE `rpid` = ?");
-
                     {
                         stmt.setString(1, getFriends(p) + new OfflineRPlayer(friend).getRPID() + "|");
                         stmt.setInt(2, p.getRPID());
@@ -78,7 +73,6 @@ public class FriendBase {
             public void run() {
                 try {
                     PreparedStatement stmt = MySQL.getConnection().prepareStatement("UPDATE `friends` SET `friends` = ? WHERE `rpid` = ?");
-
                     {
                         stmt.setString(1, getFriends(p).replace(new OfflineRPlayer(friend).getRPID() + "|", ""));
                         stmt.setInt(2, p.getRPID());
